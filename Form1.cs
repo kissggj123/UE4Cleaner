@@ -15,8 +15,10 @@ namespace UE4Cleaner
         private void Form1_Load(object sender, EventArgs e)
         {
             //string []subkeyNames;
+            string ue4pathcache = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\UnrealEngine\\Common\\DerivedDataCache";
             string ue4path = "当前登陆用户："+ System.Environment.UserName +"\r\n当前登陆电脑：" +Environment.MachineName;
             cachelocation.Text = ue4path;
+            label4.Text = "";
             /*RegistryKey key = Registry.LocalMachine;
             RegistryKey ue4key = RegistryKey.OpenRemoteBaseKey(RegistryHive.LocalMachine, "");
             string ue4version = "SOFTWARE\\EpicGames\\Unreal Engine";
@@ -27,7 +29,7 @@ namespace UE4Cleaner
                 string keyValue = (string)UE4KEY.GetValue(keyName);
             }*/
             //注释代码功能作废
-            if (!System.IO.Directory.Exists(ue4path))
+            if (!System.IO.Directory.Exists(ue4pathcache))
             {
                 //System.IO.Directory.CreateDirectory(ue4path);//不存在就锁定功能
                 clean.Enabled = false;
@@ -44,33 +46,45 @@ namespace UE4Cleaner
         private void clean_Click(object sender, EventArgs e)
         {
             string ue4path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\UnrealEngine\\Common\\DerivedDataCache";
-            label3.Text = "开始清理缓存";
-            File.SetAttributes(ue4path, FileAttributes.Normal);
-            //System.Diagnostics.Process.Start("del /f " + ue4path);
-            Directory.Delete(ue4path, true);
-            if (!System.IO.Directory.Exists(ue4path))
+            label3.Text = "";
+            label4.Text = "开始清理缓存";
+            try
             {
-                MessageBox.Show("清理完成 很干净","已完成操作");
-                clean.Enabled = false;
-                label3.Text = "清理成功";
+                File.SetAttributes(ue4path, FileAttributes.Normal);
+                //System.Diagnostics.Process.Start("del /f " + ue4path);
+                Directory.Delete(ue4path, true); 
             }
-            else
+            catch (Exception error)
             {
-                MessageBox.Show("出现清理错误", "未完成错误的操作");
-                clean.Enabled = true;
-                label3.Text = "清理出错 检查是否有360等安全保护";
+                MessageBox.Show(error.Message, "发生错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (!System.IO.Directory.Exists(ue4path))
+                {
+                    label4.Text = "操作已成功";
+                    MessageBox.Show("清理完成 很干净", "已完成操作", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    clean.Enabled = false;
+                    label3.Text = "清理成功";
+                    
+                }
+                else
+                {
+                    label4.Text = "操作出错";
+                    MessageBox.Show("出现清理错误", "未完成错误的操作", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    clean.Enabled = true;
+                    label3.Text = "清理出错 请检查错误信息";
+                    
+                }
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void about_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("开发@北斗家老司机", "Compare on UDK吧");
+            Form AboutBox1 = new AboutBox1();
+            AboutBox1.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("2018年8月12日\n\r1.移除缓存目录显示\r\n2.调整了界面\r\n3.修复了一点点的性能问题", "v1.4更新日志");
-        }
     }
 }
 

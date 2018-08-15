@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.clean = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cachelocation = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.clean = new System.Windows.Forms.Button();
+            this.about = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,31 +52,37 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cachelocation);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 165);
+            this.groupBox1.Size = new System.Drawing.Size(241, 180);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "信息";
             // 
-            // clean
+            // label4
             // 
-            this.clean.BackColor = System.Drawing.Color.MintCream;
-            this.clean.ForeColor = System.Drawing.Color.Orange;
-            this.clean.Location = new System.Drawing.Point(268, 22);
-            this.clean.Name = "clean";
-            this.clean.Size = new System.Drawing.Size(107, 38);
-            this.clean.TabIndex = 9;
-            this.clean.Text = "开始清理";
-            this.clean.UseVisualStyleBackColor = false;
-            this.clean.Click += new System.EventHandler(this.clean_Click);
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoEllipsis = true;
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.ForeColor = System.Drawing.Color.PaleGreen;
+            this.label4.Location = new System.Drawing.Point(79, 99);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "准备就绪";
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoEllipsis = true;
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -101,6 +107,8 @@
             // 
             // cachelocation
             // 
+            this.cachelocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cachelocation.AutoEllipsis = true;
             this.cachelocation.AutoSize = true;
             this.cachelocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -112,29 +120,29 @@
             this.cachelocation.TabIndex = 2;
             this.cachelocation.Text = "当前缓存";
             // 
-            // button2
+            // clean
             // 
-            this.button2.BackColor = System.Drawing.Color.MintCream;
-            this.button2.ForeColor = System.Drawing.Color.Orange;
-            this.button2.Location = new System.Drawing.Point(268, 81);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(106, 38);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "更新日志";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.clean.BackColor = System.Drawing.Color.MintCream;
+            this.clean.ForeColor = System.Drawing.Color.Orange;
+            this.clean.Location = new System.Drawing.Point(272, 55);
+            this.clean.Name = "clean";
+            this.clean.Size = new System.Drawing.Size(107, 38);
+            this.clean.TabIndex = 9;
+            this.clean.Text = "开始清理";
+            this.clean.UseVisualStyleBackColor = false;
+            this.clean.Click += new System.EventHandler(this.clean_Click);
             // 
-            // button4
+            // about
             // 
-            this.button4.BackColor = System.Drawing.Color.MintCream;
-            this.button4.ForeColor = System.Drawing.Color.Orange;
-            this.button4.Location = new System.Drawing.Point(268, 137);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(106, 38);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "关于程序";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.about.BackColor = System.Drawing.Color.MintCream;
+            this.about.ForeColor = System.Drawing.Color.Orange;
+            this.about.Location = new System.Drawing.Point(272, 101);
+            this.about.Name = "about";
+            this.about.Size = new System.Drawing.Size(107, 38);
+            this.about.TabIndex = 10;
+            this.about.Text = "关于清理工具";
+            this.about.UseVisualStyleBackColor = false;
+            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // Form1
             // 
@@ -142,10 +150,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(391, 189);
+            this.ClientSize = new System.Drawing.Size(391, 204);
+            this.Controls.Add(this.about);
             this.Controls.Add(this.clean);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -153,7 +160,7 @@
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UE4缓存清理 v1.4";
+            this.Text = "UE4缓存清理 v1.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -166,11 +173,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label cachelocation;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button clean;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button about;
     }
 }
 

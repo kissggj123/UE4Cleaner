@@ -59,5 +59,15 @@ namespace UE4Cleaner.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

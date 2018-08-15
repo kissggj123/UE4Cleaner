@@ -7,3 +7,4 @@ E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Release\UE4Cleaner.csproj.G
 E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Release\UE4Cleaner.exe
 E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Release\UE4Cleaner.pdb
 E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Release\UE4Cleaner.csprojResolveAssemblyReference.cache
+E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Release\UE4Cleaner.AboutBox1.resources
