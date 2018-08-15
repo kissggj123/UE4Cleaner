@@ -1,8 +1,0 @@
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\bin\Debug\UE4Cleaner.exe.config
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\bin\Debug\UE4Cleaner.exe
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\bin\Debug\UE4Cleaner.pdb
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Debug\UE4Cleaner.Form1.resources
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Debug\UE4Cleaner.Properties.Resources.resources
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Debug\UE4Cleaner.csproj.GenerateResource.Cache
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Debug\UE4Cleaner.exe
-E:\临时文件\menglolita\UE4Cleaner\UE4Cleaner\obj\Debug\UE4Cleaner.pdb
